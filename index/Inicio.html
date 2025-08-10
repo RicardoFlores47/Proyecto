@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="Inicio.css">
-
 <head>
-    <!---===================== Meta Datos ====================-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--===================== Meta Datos Básicos ====================-->
+    <!-- Define la codificación de caracteres para mostrar correctamente acentos y símbolos especiales -->
+    <meta charset="utf-8"/>
+    
+    <!-- Configura la visualización responsive para dispositivos móviles -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    
+    <!-- Título principal que aparece en la pestaña del navegador y resultados de búsqueda -->
     <title>MODA YA! - Tu destino de moda urbana</title>
-    <meta name="description"
-        content="Descubre las últimas tendencias en moda urbana y accesorios premium en MODA YA! - Camisas, relojes, zapatos, lentes y más.">
-    <meta name="keywords"
-        content="moda urbana, ropa moderna, accesorios premium, camisas, relojes, zapatos, lentes, pantalones, tienda online">
-    <meta name="author" content="Ampuero y Flores">
-    <meta name="robots" content="index, follow">
-
-    <!--====================== Open Graph Meta Tags ==========-->
-
-    <meta property="og:title" content="MODA YA! - Tu destino de moda urbana">
-    <meta property="og:description" content="Las últimas tendencias en moda urbana y accesorios premium">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://modaya.com">
-
+    
+    <!--===================== Meta Datos SEO ====================-->
+    <!-- Descripción que aparece en los resultados de búsqueda de Google (máximo 160 caracteres) -->
+    <meta content="Descubre las últimas tendencias en moda urbana y accesorios premium en MODA YA! - Camisas, relojes, zapatos, lentes y más." name="description"/>
+    
+    <!-- Palabras clave para ayudar a los motores de búsqueda a categorizar el contenido -->
+    <meta content="moda urbana, ropa moderna, accesorios premium, camisas, relojes, zapatos, lentes, pantalones, tienda online" name="keywords"/>
+    
+    <!-- Especifica los autores/desarrolladores del sitio web -->
+    <meta content="Ampuero y Flores" name="author"/>
+    
+    <!-- Instrucciones para los robots de búsqueda: indexar la página y seguir enlaces -->
+    <meta content="index, follow" name="robots"/>
+    
+    <!--====================== Open Graph Meta Tags para Redes Sociales ==========-->
+    <!-- Título que aparece cuando se comparte el enlace en Facebook, WhatsApp, etc. -->
+    <meta content="MODA YA! - Tu destino de moda urbana" property="og:title"/>
+    
+    <!-- Descripción que aparece en la vista previa al compartir en redes sociales -->
+    <meta content="Las últimas tendencias en moda urbana y accesorios premium" property="og:description"/>
+    
+    <!-- Tipo de contenido (website para sitios web) -->
+    <meta content="website" property="og:type"/>
+    
+    <!-- URL canónica del sitio web (cambiar por la URL real cuando esté en producción) -->
+    <meta content="https://modaya.com" property="og:url"/>
+    
+    <!-- Imagen que aparece cuando se comparte en redes sociales (1200x630px recomendado) -->
+    <meta content="https://modaya.com/images/og-image.jpg" property="og:image"/>
+    <meta content="1200" property="og:image:width"/>
+    <meta content="630" property="og:image:height"/>
+    <meta content="MODA YA! - Tienda de moda urbana" property="og:image:alt"/>
+    
+    <!--===================== Meta Tags Adicionales para Móviles ====================-->
+    <!-- Color de la barra de estado en móviles -->
+    <meta name="theme-color" content="#3b82f6"/>
+    <!-- Configuración para iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+    <meta name="apple-mobile-web-app-title" content="MODA YA!"/>
+    
     <!-- ============================ Favicon ================-->
-
-    <link rel="icon" type="image/svg+xml" href="/vite.svg">
-    <link rel='stylesheet'
-        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
-    <link rel='stylesheet'
-        href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-
-
+    <!-- Icono que aparece en la pestaña del navegador -->
+    <link href="/vite.svg" rel="icon" type="image/svg+xml"/>
+    <!-- Favicon para dispositivos Apple -->
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+    <!-- Favicon tradicional -->
+    <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+    
+    <!--===================== Librerías de Iconos ====================-->
+    <!-- Iconos de Flaticon para elementos de la interfaz -->
+    <link href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css" rel="stylesheet"/>
+    <link href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet"/>
+    
     <!-- ============================ Fonts ==================-->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;700;900&display=swap"
-        rel="stylesheet">
-
+    <!-- Pre-conexión a Google Fonts para mejorar el rendimiento -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    
+    <!-- Preload de la fuente principal para mejorar rendimiento -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <!-- Tipografías: Inter para textos generales y Playfair Display para títulos elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet"/>
+    
     <!-- =========================== Icons ================== -->
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
-
+    <!-- Bootstrap Icons para iconografía consistente -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    
+    <!--============================ Styles ==================-->
+    <!-- Preload de la hoja de estilos principal para mejorar rendimiento -->
+    <link href="Inicio_sin_js.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <!-- Hoja de estilos principal -->
+    <link href="Inicio_sin_js.css" rel="stylesheet"/>
 </head>
 
-    <!--============================ Styles ==================-->
-
-    <link rel="stylesheet" href="Inicio.css">
-
-    <!--============================ Scripts ==================-->
-
-    <script src="Inicio.js"></script>
-
 <body>
-
     <!--============================ Header ==================-->
-
     <header class="header">
         <div class="container">
             <div class="header-content">
-
                 <!-- ================ Logo ===================-->
-
                 <div class="logo">
                     <h1 class="logo-text">
                         <span class="brand-gradient">MODA YA!</span>
@@ -69,59 +98,52 @@
                 </div>
 
                 <!--============= Desktop Navigation =========-->
-
                 <nav class="desktop-nav">
-                    <a href="#inicio" class="nav-link active">Inicio</a>
-                    <a href="#novedades" class="nav-link">Novedades</a>
-                    <a href="#categorias" class="nav-link">Categorías</a>
-                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <a class="nav-link active" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#novedades">Novedades</a>
+                    <a class="nav-link" href="#categorias">Categorías</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </nav>
 
                 <!-- =============== Actions ================ -->
-
                 <div class="header-actions">
-                    <button class="action-btn" aria-label="Buscar">
+                    <button aria-label="Buscar" class="action-btn">
                         <i class="bi bi-search"></i>
                     </button>
-                    <button class="action-btn" aria-label="Favoritos">
+                    <button aria-label="Favoritos" class="action-btn">
                         <i class="bi bi-heart"></i>
                     </button>
-                    <button class="action-btn" aria-label="Usuario">
+                    <button aria-label="Usuario" class="action-btn">
                         <i class="bi bi-person"></i>
                     </button>
-                    <button class="cart-btn" id="cart-toggle" aria-label="Carrito de compras">
+                    <button aria-label="Carrito de compras" class="cart-btn">
                         <i class="bi bi-bag"></i>
-                        <span class="cart-badge" id="contador-productos">0</span>
+                        <span class="cart-badge">0</span>
                     </button>
 
                     <!--======== Mobile Menu Button========== -->
-
-                    <button class="mobile-menu-btn" id="abrir" aria-label="Abrir menú">
+                    <button aria-label="Abrir menú" class="mobile-menu-btn">
                         <i class="bi bi-list"></i>
                     </button>
                 </div>
             </div>
 
             <!-- ============== Mobile Navigation ============-->
-
-            <nav class="mobile-nav" id="menu">
-                <button class="mobile-nav-close" id="cerrar" aria-label="Cerrar menú">
+            <nav class="mobile-nav">
+                <button aria-label="Cerrar menú" class="mobile-nav-close">
                     <i class="bi bi-x"></i>
                 </button>
-                <a href="#inicio" class="mobile-nav-link">Inicio</a>
-                <a href="#novedades" class="mobile-nav-link">Novedades</a>
-                <a href="#categorias" class="mobile-nav-link">Categorías</a>
-                <a href="#contacto" class="mobile-nav-link">Contacto</a>
+                <a class="mobile-nav-link" href="#inicio">Inicio</a>
+                <a class="mobile-nav-link" href="#novedades">Novedades</a>
+                <a class="mobile-nav-link" href="#categorias">Categorías</a>
+                <a class="mobile-nav-link" href="#contacto">Contacto</a>
             </nav>
         </div>
     </header>
 
     <!-- =================Main Content =======================-->
-
     <main>
-
         <!--============= Hero Section =======================-->
-
         <section class="hero-section" id="inicio">
             <div class="container">
                 <div class="hero-content">
@@ -145,7 +167,6 @@
         </section>
 
         <!--================= Featured Categories =========== -->
-
         <section class="categories-section" id="categorias">
             <div class="container">
                 <h2 class="section-title">Categorías Destacadas</h2>
@@ -157,6 +178,7 @@
                         <h3>Camisas</h3>
                         <p>Ver colección</p>
                     </div>
+
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-watch"></i>
@@ -164,6 +186,7 @@
                         <h3>Relojes</h3>
                         <p>Ver colección</p>
                     </div>
+
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="fi fi-sr-shoe-prints"></i>
@@ -171,6 +194,7 @@
                         <h3>Zapatos</h3>
                         <p>Ver colección</p>
                     </div>
+
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-eyeglasses"></i>
@@ -178,6 +202,7 @@
                         <h3>Lentes</h3>
                         <p>Ver colección</p>
                     </div>
+
                     <div class="category-card">
                         <div class="category-icon">
                             <i class="bi bi-person-standing"></i>
@@ -190,7 +215,6 @@
         </section>
 
         <!-- ================Products Section =============== -->
-
         <section class="products-section" id="novedades">
             <div class="container">
                 <div class="products-header">
@@ -203,18 +227,16 @@
                 </div>
 
                 <div class="products-grid">
-
                     <!-- ==============Product 1 (Camisas)============-->
-
                     <div class="item product-card" data-category="camisas" data-new="true">
                         <span class="product-badge">Nuevo</span>
                         <div class="product-image-container">
-                            <img src="../Image/Camisas.jpeg" alt="Camisa Polo Premium" class="product-image">
+                            <img alt="Camisa Polo Premium" class="product-image" src="../Image/Camisas.jpg"/>
                             <div class="product-overlay">
-                                <button class="overlay-btn" aria-label="Vista rápida">
+                                <button aria-label="Vista rápida" class="overlay-btn">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="overlay-btn heart-btn" aria-label="Agregar a favoritos">
+                                <button aria-label="Agregar a favoritos" class="overlay-btn heart-btn">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </div>
@@ -222,8 +244,8 @@
                         <div class="product-info">
                             <div class="product-category">Camisas</div>
                             <h3>Camisa Polo Premium</h3>
-                            <p class="product-description">Tejido casual de algodón, ideal para clima cálido y looks
-                                urbanos.</p>
+                            <p class="product-description">Tejido casual de algodón, ideal para clima cálido y looks urbanos.</p>
+                            
                             <div class="product-rating">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -234,6 +256,7 @@
                                 </div>
                                 <span class="rating-text">(4.5)</span>
                             </div>
+
                             <div class="product-sizes">
                                 <span class="sizes-label">Tallas:</span>
                                 <div class="sizes-grid">
@@ -243,26 +266,26 @@
                                     <button class="size-btn">XL</button>
                                 </div>
                             </div>
+
                             <div class="product-footer">
                                 <div class="costo product-price">$25</div>
-                                <button class="add-to-cart-btn info-product">
+                                <div class="add-to-cart-btn info-product">
                                     <i class="bi bi-bag-plus"></i>
                                     Agregar
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- ==============Product 2 (Reloj)==========-->
-
                     <div class="item product-card" data-category="relojes">
                         <div class="product-image-container">
-                            <img src="image/reloj.jpeg" alt="Reloj Elegante" class="product-image">
+                            <img alt="Reloj Elegante" class="product-image" src="../Image/Reloj.jpg"/>
                             <div class="product-overlay">
-                                <button class="overlay-btn" aria-label="Vista rápida">
+                                <button aria-label="Vista rápida" class="overlay-btn">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="overlay-btn heart-btn" aria-label="Agregar a favoritos">
+                                <button aria-label="Agregar a favoritos" class="overlay-btn heart-btn">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </div>
@@ -270,8 +293,8 @@
                         <div class="product-info">
                             <div class="product-category">Relojes</div>
                             <h3>Reloj Elegante</h3>
-                            <p class="product-description">Reloj analógico con diseño elegante, perfecto para cualquier
-                                ocasión.</p>
+                            <p class="product-description">Reloj analógico con diseño elegante, perfecto para cualquier ocasión.</p>
+                            
                             <div class="product-rating">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -282,32 +305,33 @@
                                 </div>
                                 <span class="rating-text">(4.8)</span>
                             </div>
+
                             <div class="product-sizes">
                                 <span class="sizes-label">Tallas:</span>
                                 <div class="sizes-grid">
                                     <button class="size-btn selected">Único</button>
                                 </div>
                             </div>
+
                             <div class="product-footer">
                                 <div class="costo product-price">$30</div>
-                                <button class="add-to-cart-btn info-product">
+                                <div class="add-to-cart-btn info-product">
                                     <i class="bi bi-bag-plus"></i>
                                     Agregar
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- ==============Product 3 (Zapatos)=============-->
-
                     <div class="item product-card" data-category="zapatos">
                         <div class="product-image-container">
-                            <img src="image/zapato.jpeg" alt="Zapatos de Cuero" class="product-image">
+                            <img alt="Zapatos de Cuero" class="product-image" src="../Image/Zapatos.jpg"/>
                             <div class="product-overlay">
-                                <button class="overlay-btn" aria-label="Vista rápida">
+                                <button aria-label="Vista rápida" class="overlay-btn">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="overlay-btn heart-btn" aria-label="Agregar a favoritos">
+                                <button aria-label="Agregar a favoritos" class="overlay-btn heart-btn">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </div>
@@ -315,8 +339,8 @@
                         <div class="product-info">
                             <div class="product-category">Zapatos</div>
                             <h3>Zapatos de Cuero</h3>
-                            <p class="product-description">Zapatos de cuero cómodos y resistentes, ideales para uso
-                                diario.</p>
+                            <p class="product-description">Zapatos de cuero cómodos y resistentes, ideales para uso diario.</p>
+                            
                             <div class="product-rating">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -327,6 +351,7 @@
                                 </div>
                                 <span class="rating-text">(4.3)</span>
                             </div>
+
                             <div class="product-sizes">
                                 <span class="sizes-label">Tallas:</span>
                                 <div class="sizes-grid">
@@ -337,27 +362,27 @@
                                     <button class="size-btn">42</button>
                                 </div>
                             </div>
+
                             <div class="product-footer">
                                 <div class="costo product-price">$32</div>
-                                <button class="add-to-cart-btn info-product">
+                                <div class="add-to-cart-btn info-product">
                                     <i class="bi bi-bag-plus"></i>
                                     Agregar
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- =============Product 4 (Lentes)==============-->
-
                     <div class="item product-card" data-category="lentes" data-new="true">
                         <span class="product-badge">Nuevo</span>
                         <div class="product-image-container">
-                            <img src="image/lentes.jpeg" alt="Lentes Modernos" class="product-image">
+                            <img alt="Lentes Modernos" class="product-image" src="../Image/Lentes.jpg"/>
                             <div class="product-overlay">
-                                <button class="overlay-btn" aria-label="Vista rápida">
+                                <button aria-label="Vista rápida" class="overlay-btn">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="overlay-btn heart-btn" aria-label="Agregar a favoritos">
+                                <button aria-label="Agregar a favoritos" class="overlay-btn heart-btn">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </div>
@@ -365,8 +390,8 @@
                         <div class="product-info">
                             <div class="product-category">Lentes</div>
                             <h3>Lentes Modernos</h3>
-                            <p class="product-description">Cristales de policarbonato moderno y liviano, diseño unisex
-                                para uso diario.</p>
+                            <p class="product-description">Cristales de policarbonato moderno y liviano, diseño unisex para uso diario.</p>
+                            
                             <div class="product-rating">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -377,32 +402,33 @@
                                 </div>
                                 <span class="rating-text">(4.6)</span>
                             </div>
+
                             <div class="product-sizes">
                                 <span class="sizes-label">Tallas:</span>
                                 <div class="sizes-grid">
                                     <button class="size-btn selected">Único</button>
                                 </div>
                             </div>
+
                             <div class="product-footer">
                                 <div class="costo product-price">$18</div>
-                                <button class="add-to-cart-btn info-product">
+                                <div class="add-to-cart-btn info-product">
                                     <i class="bi bi-bag-plus"></i>
                                     Agregar
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- =============Product 5 (Pantalones) ==============-->
-
                     <div class="item product-card" data-category="pantalones">
                         <div class="product-image-container">
-                            <img src="image/pantalon.jpeg" alt="Pantalones Cargo" class="product-image">
+                            <img alt="Pantalones Cargo" class="product-image" src="../Image/Pantalon.jpg"/>
                             <div class="product-overlay">
-                                <button class="overlay-btn" aria-label="Vista rápida">
+                                <button aria-label="Vista rápida" class="overlay-btn">
                                     <i class="bi bi-eye"></i>
                                 </button>
-                                <button class="overlay-btn heart-btn" aria-label="Agregar a favoritos">
+                                <button aria-label="Agregar a favoritos" class="overlay-btn heart-btn">
                                     <i class="bi bi-heart"></i>
                                 </button>
                             </div>
@@ -410,8 +436,8 @@
                         <div class="product-info">
                             <div class="product-category">Pantalones</div>
                             <h3>Pantalones Cargo</h3>
-                            <p class="product-description">Pantalones cargo con múltiples bolsillos, estilo urbano y
-                                versátil.</p>
+                            <p class="product-description">Pantalones cargo con múltiples bolsillos, estilo urbano y versátil.</p>
+                            
                             <div class="product-rating">
                                 <div class="stars">
                                     <i class="bi bi-star-fill"></i>
@@ -422,6 +448,7 @@
                                 </div>
                                 <span class="rating-text">(4.4)</span>
                             </div>
+
                             <div class="product-sizes">
                                 <span class="sizes-label">Tallas:</span>
                                 <div class="sizes-grid">
@@ -432,12 +459,13 @@
                                     <button class="size-btn">36</button>
                                 </div>
                             </div>
+
                             <div class="product-footer">
                                 <div class="costo product-price">$35</div>
-                                <button class="add-to-cart-btn info-product">
+                                <div class="add-to-cart-btn info-product">
                                     <i class="bi bi-bag-plus"></i>
                                     Agregar
-                                </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -446,19 +474,15 @@
         </section>
 
         <!-- ==============Contact Section ===================-->
-
         <section class="contact-section" id="contacto">
             <div class="container">
                 <h2 class="section-title">Contáctanos</h2>
                 <div class="contact-grid">
-
                     <!--======== Contact Info =============== -->
-
                     <div class="contact-info">
                         <h3>Información de Contacto</h3>
-                        <p>Si deseas más detalles sobre un producto del catálogo o necesitas ayuda con tu pedido, no
-                            dudes en contactarnos.</p>
-
+                        <p>Si deseas más detalles sobre un producto del catálogo o necesitas ayuda con tu pedido, no dudes en contactarnos.</p>
+                        
                         <div class="contact-methods">
                             <div class="contact-method">
                                 <div class="contact-icon">
@@ -506,20 +530,19 @@
                         </div>
 
                         <!-- =========Social Links ===========-->
-
                         <div class="contact-social">
                             <h4>Síguenos</h4>
                             <div class="social-links">
-                                <a href="#" aria-label="Facebook">
+                                <a aria-label="Facebook" href="#">
                                     <i class="bi bi-facebook"></i>
                                 </a>
-                                <a href="#" aria-label="Instagram">
+                                <a aria-label="Instagram" href="https://www.instagram.com/modaya_oficial/">
                                     <i class="bi bi-instagram"></i>
                                 </a>
-                                <a href="#" aria-label="Twitter">
+                                <a aria-label="Twitter" href="https://x.com/modaya_oficial">
                                     <i class="bi bi-twitter"></i>
                                 </a>
-                                <a href="#" aria-label="LinkedIn">
+                                <a aria-label="LinkedIn" href="#">
                                     <i class="bi bi-linkedin"></i>
                                 </a>
                             </div>
@@ -527,30 +550,26 @@
                     </div>
 
                     <!--============= Contact Form ===========-->
-
                     <div class="contact-form-container">
-                        <form class="contact-form" id="contact-form" autocomplete="off">
+                        <form autocomplete="off" class="contact-form">
                             <div class="form-group">
                                 <label for="name">Nombre Completo</label>
-                                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo"
-                                    class="form-input" required>
+                                <input class="form-input" id="name" name="name" placeholder="Ingresa tu nombre completo" required="" type="text"/>
                             </div>
 
                             <div class="form-group">
                                 <label for="email">Correo Electrónico</label>
-                                <input type="email" id="email" name="email" placeholder="tu@email.com"
-                                    class="form-input" required>
+                                <input class="form-input" id="email" name="email" placeholder="tu@email.com" required="" type="email"/>
                             </div>
 
                             <div class="form-group">
                                 <label for="phone">Teléfono (Opcional)</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567"
-                                    class="form-input">
+                                <input class="form-input" id="phone" name="phone" placeholder="+1 (555) 123-4567" type="tel"/>
                             </div>
 
                             <div class="form-group">
                                 <label for="subject">Asunto</label>
-                                <select id="subject" name="subject" class="form-select" required>
+                                <select class="form-select" id="subject" name="subject" required="">
                                     <option value="">Selecciona un asunto</option>
                                     <option value="producto">Consulta sobre producto</option>
                                     <option value="pedido">Estado de pedido</option>
@@ -562,19 +581,18 @@
 
                             <div class="form-group">
                                 <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..."
-                                    class="form-textarea" rows="5" required></textarea>
+                                <textarea class="form-textarea" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required="" rows="5"></textarea>
                             </div>
 
                             <div class="form-group checkbox-group">
                                 <label class="checkbox-label">
-                                    <input type="checkbox" name="newsletter" class="form-checkbox">
+                                    <input class="form-checkbox" name="newsletter" type="checkbox"/>
                                     <span class="checkmark"></span>
                                     Quiero recibir noticias y ofertas especiales
                                 </label>
                             </div>
 
-                            <button type="submit" class="btn-enviar">
+                            <button class="btn-enviar" type="submit">
                                 <i class="bi bi-send"></i>
                                 Enviar Mensaje
                             </button>
@@ -585,40 +603,38 @@
         </section>
 
         <!-- =====================FAQ Section================ -->
-
         <section class="faq-section">
             <div class="container">
                 <h2 class="section-title">Preguntas Frecuentes</h2>
                 <div class="faq-grid">
                     <div class="faq-item">
                         <h3>¿Cuál es el tiempo de entrega?</h3>
-                        <p>Nuestros envíos estándar tardan entre 3-5 días hábiles. Para envíos express, la entrega es en
-                            1-2 días hábiles.</p>
+                        <p>Nuestros envíos estándar tardan entre 3-5 días hábiles. Para envíos express, la entrega es en 1-2 días hábiles.</p>
                     </div>
+
                     <div class="faq-item">
                         <h3>¿Puedo devolver un producto?</h3>
-                        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra, siempre que el
-                            producto esté en condiciones originales.</p>
+                        <p>Sí, aceptamos devoluciones dentro de los 30 días posteriores a la compra, siempre que el producto esté en condiciones originales.</p>
                     </div>
+
                     <div class="faq-item">
                         <h3>¿Ofrecen envío gratuito?</h3>
-                        <p>Sí, ofrecemos envío gratuito en pedidos superiores a $50. Para pedidos menores, el costo de
-                            envío es de $5.</p>
+                        <p>Sí, ofrecemos envío gratuito en pedidos superiores a $50. Para pedidos menores, el costo de envío es de $5.</p>
                     </div>
+
                     <div class="faq-item">
                         <h3>¿Cómo puedo rastrear mi pedido?</h3>
-                        <p>Una vez que tu pedido sea enviado, recibirás un email con el número de seguimiento para
-                            rastrear tu paquete.</p>
+                        <p>Una vez que tu pedido sea enviado, recibirás un email con el número de seguimiento para rastrear tu paquete.</p>
                     </div>
+
                     <div class="faq-item">
                         <h3>¿Qué métodos de pago aceptan?</h3>
-                        <p>Aceptamos tarjetas de crédito, débito, PayPal y transferencias bancarias. Todos los pagos son
-                            procesados de forma segura.</p>
+                        <p>Aceptamos tarjetas de crédito, débito, PayPal y transferencias bancarias. Todos los pagos son procesados de forma segura.</p>
                     </div>
+
                     <div class="faq-item">
                         <h3>¿Tienen tienda física?</h3>
-                        <p>Actualmente somos una tienda online, pero estamos planeando abrir una tienda física pronto.
-                            ¡Mantente atento!</p>
+                        <p>Actualmente somos una tienda online, pero estamos planeando abrir una tienda física pronto. ¡Mantente atento!</p>
                     </div>
                 </div>
             </div>
@@ -626,7 +642,6 @@
     </main>
 
     <!-- =======================Footer ====================== -->
-
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -634,11 +649,13 @@
                     <h3 class="footer-title">MODA YA!</h3>
                     <p class="footer-text">Tu destino para la moda urbana y accesorios premium.</p>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/modaya.oficial"><i class="bi bi-facebook"></i></a>
+                        <a aria-label="Instagram" href="https://www.instagram.com/modaya_oficial/"><i class="bi bi-instagram"></i></a>
+                        <a aria-label="Twitter" href="https://x.com/modaya_oficial"><i class="bi bi-twitter"></i></a>
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/modaya"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
+
                 <div class="footer-section">
                     <h4>Enlaces</h4>
                     <ul class="footer-links">
@@ -648,44 +665,46 @@
                         <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-section">
                     <h4>Contacto</h4>
                     <p class="footer-text">email@modaya.com</p>
                     <p class="footer-text">+1 234 567 890</p>
                     <p class="footer-text">Ciudad, País</p>
                 </div>
+
                 <div class="footer-section">
                     <h4>Newsletter</h4>
                     <p class="footer-text">Suscríbete para recibir las últimas novedades</p>
                     <div class="newsletter-form">
-                        <input type="email" placeholder="Tu email" class="newsletter-input">
+                        <input class="newsletter-input" placeholder="Tu email" type="email"/>
                         <button class="newsletter-btn">Suscribir</button>
                     </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 MODA YA! - Desarrollado por Ampuero y Flores</p>
+                <p>© 2025 MODA YA! - Desarrollado por Ampuero y Flores</p>
             </div>
         </div>
     </footer>
 
     <!-- ======================Cart Sidebar ==================-->
-
-    <div class="cart-overlay hidden-cart" id="cart-container">
+    <div class="cart-overlay hidden-cart">
         <div class="cart-sidebar">
             <div class="cart-header">
                 <h2 class="cart-title">
                     <i class="bi bi-bag"></i>
                     Carrito de Compras
                 </h2>
-                <button class="cart-close-btn" id="cart-close">
+                <button class="cart-close-btn">
                     <i class="bi bi-x"></i>
                 </button>
             </div>
 
             <div class="cart-content">
                 <div class="container-cart-products">
-                    <div class="empty-cart" id="empty-cart">
+                    <div class="empty-cart">
                         <i class="bi bi-bag-x"></i>
                         <p class="empty-cart-text">Tu carrito está vacío</p>
                         <p class="empty-cart-subtext">Agrega algunos productos para comenzar</p>
@@ -714,7 +733,6 @@
             </div>
         </div>
     </div>
-    <script src="Inicio.js"></script>
-</body>
 
+</body>
 </html>
